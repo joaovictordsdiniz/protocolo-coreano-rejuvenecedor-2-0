@@ -1,0 +1,426 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/webp" href="img/favicon.webp" />
+    <title>CNN - Ciencia y Salud</title>
+    <!-- CSS Geral !-->
+    <link href="assets/style.css" rel="stylesheet" type="text/css" media="all">
+    <!-- CSS Geral !-->
+    <!-- CSS Bootstrap !-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <!-- CSS Bootstrap !-->
+
+    <!-- PIXEL AQUI !-->
+
+</head>
+
+<body>
+
+    <!-- Header !-->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-1 col-lg-1 col-sm-1 logo">
+                    <svg class="cnn-badge-icon" width="40" height="40" viewBox="0 0 240 240" fill=""
+                        xmlns="https://www.w3.org/2000/svg" aria-hidden="true">
+                        <rect x="0" y="0" width="100%" height="100%" fill="#fff"></rect>
+                        <path
+                            d="M.31-.07v240h240V-.07ZM86.54,135.29V92.51c0-16.1,20.81-23.83,31.82-5.12.8,1.35,18.14,31.22,18.14,31.22V92.51c0-16.1,20.8-23.83,31.81-5.12.8,1.35,18.14,31.22,18.14,31.22V76.79h10.38V147a2.11,2.11,0,0,1-1.51,2.14c-1.1.3-2.26-.38-3.11-1.82-.17-.28-9-15.46-17.48-30.13L159.17,90.4c-2.18-3.7-5.43-4.35-7.74-3.72a6.23,6.23,0,0,0-4.55,6.13V147a2.12,2.12,0,0,1-1.51,2.14c-1.11.3-2.27-.38-3.11-1.82-.15-.25-8.34-14.36-16.25-28-10.08-17.38-16.7-28.78-16.8-28.95-2.18-3.71-5.44-4.35-7.77-3.72a6.24,6.24,0,0,0-4.56,6.13v53.05a2.9,2.9,0,0,1-2.72,2.71H67.23a28.64,28.64,0,0,1,0-57.28h14v10.36H67.35a18.28,18.28,0,1,0,0,36.56H83.68A2.84,2.84,0,0,0,86.54,135.29Zm124.77,12.05c0,16.1-20.81,23.83-31.82,5.13-.79-1.35-18.14-31.23-18.14-31.23v26.1c0,16.1-20.8,23.83-31.81,5.13-.8-1.35-18.14-31.23-18.14-31.23v24.61c0,11.17-6.63,17.22-17,17.22H67.25a43.14,43.14,0,0,1,0-86.28h14V87.15h-14a32.78,32.78,0,1,0,0,65.56H94.16a7,7,0,0,0,6.86-6.85V92.81a2.1,2.1,0,0,1,1.51-2.13c1.1-.3,2.26.38,3.11,1.82l16.79,28.93c9.76,16.83,16.17,27.88,16.25,28,2.19,3.7,5.45,4.35,7.78,3.71A6.22,6.22,0,0,0,151,147V92.82a2.11,2.11,0,0,1,1.49-2.14c1.09-.3,2.24.38,3.08,1.82l15.56,26.81,17.49,30.15c1.71,2.9,4.09,3.93,6.16,3.93a6,6,0,0,0,1.61-.22A6.23,6.23,0,0,0,201,147V76.79h10.34Z"
+                            transform="translate(-0.31 0.07)"></path>
+                    </svg>
+                </div>
+                <div class="col-md-10 col-lg-10 col-sm-10 menu">
+                    <ul class="cnn-nav">
+                        <li class="nav-item">
+                            <a href="#main">World</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#main">Africa</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#main">Americas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#main">Asia</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#main">Australia</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#main">China</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#main">Europe</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#main">India</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#main">Middle East</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#main">United Kingdom</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-1 col-lg-1 col-sm-1 busca">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                        class="bi bi-search" viewBox="0 0 16 16">
+                        <path
+                            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Header !-->
+
+    <!-- Conteúdo Geral !-->
+    <main class="main" id="main">
+
+        <!-- Conteúdo Matéria !-->
+        <section class="conteudo-materia" id="conteudo-materia">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 col-lg-12 col-sm-12">
+                        <div class="copy-materia">
+
+                            <h2>El secreto de Jennifer López para eliminar las arrugas y las marcas de la edad de forma
+                                natural</h2>
+
+                            <h1><span class="red">Ritual Matutino es el “secreto” de una piel sedosa en 28 días</span>
+                            </h1>
+
+                            <p>Usado por celebridades como Jennifer López, Shakira, Madonna y miles de mujeres más, este
+                                tratamiento coreano ha demostrado ser altamente efectivo para eliminar las arrugas, la
+                                flacidez de la piel y cualquier marca de la edad.</p>
+
+                            <h3>Comprueba por ti mismo los increíbles resultados.</h3>
+
+                            <p>¿Qué pasaría si la gente normal hiciera la misma rutina casera que hacen las celebridades
+                                que no parecen envejecer? La redacción habló con Jennifer López, actriz y cantante y
+                                encargada de dar a conocer este tratamiento, para entender cómo tú también puedes
+                                repetir el mismo tratamiento sin salir de casa.</p>
+
+                            <img src="img/img1.webp" width="100%" height="100%" class="img1 img-fluid" alt="Imagem 01">
+                            <span class="label-img">Entrevista realizada el 29/01/2023</span>
+
+                            <p><b>REPORTERA:</b> Jennifer es un placer hablar contigo, ¿podemos empezar por saber cuál
+                                es tu edad actual?</p>
+
+                            <p><b>JENNIFER LOPEZ:</b> El gusto es todo mío, hoy cumplo 53 años, pero confieso que
+                                todavía me siento como una mujer de 30.</p>
+
+                            <p><b>REPORTERA:</b> Bueno, mirándote, podría decir fácilmente que no estás ni cerca de los
+                                35, pero cuéntanos, ¿cuál es el secreto para mantener una piel tan perfecta?</p>
+
+                            <p><b>JENNIFER LOPEZ:</b> Para ser honesta, lo único que he hecho durante años es seguir el
+                                tratamiento casero del Doctor Oscar Martínez, que es mi dermatólogo personal.</p>
+
+                            <p><b>REPORTERA:</b> Mira, no quiero ofenderla de ninguna manera, pero las celebridades de
+                                Hollywood son famosas por usar botox y cirugía plástica en exceso, ¿este también es su
+                                caso?</p>
+
+                            <p><b>JENNIFER LOPEZ:</b> Para nada, el doctor Oscar me lo prohibió, hace unos años cuando
+                                empezaron a salir las arrugas, consideré ponerme botox, pero cuando mi doctor lo supo me
+                                lo prohibió, y luego me dio el <span class="red">Protocolo Rejuvenecedor Coreano</span>,
+                                que es lo que muchas mujeres y yo usamos todos los días.</p>
+
+                            <p><b>REPORTERA:</b> ¿Nos puede hablar más sobre este tratamiento?</p>
+
+                            <p><b>JENNIFER LOPEZ:</b> Claro, se trata de una rutina casera que hago en la comodidad de
+                                mi casa. Sin medicamentos y sin cirugías es algo muy sencillo de hacer.</p>
+
+                            <p><b>REPORTERA:</b> ¿Cree que cualquier mujer que repita este tratamiento podrá deshacerse
+                                de las arrugas y las manchas de la edad?</p>
+
+                            <p><b>JENNIFER LOPEZ:</b> Mira, no soy la única que hace este tratamiento, y antes de
+                                comenzar vi los resultados que tenían algunas mujeres tuvieron incluso con 60 y hasta 70
+                                años, la transformación es impresionante, entonces sí. Cualquier mujer, aunque ya tenga
+                                arrugas, obtendrá resultados increíbles con este tratamiento.</p>
+
+                            <p><b>REPORTERA:</b> Muchas gracias por tus comentarios, Jennifer, fue un placer volver a
+                                hablar contigo.</p>
+
+                            <p><b>JENNIFER LOPEZ:</b> Muchas gracias, cuenten conmigo para otras entrevistas.</p>
+
+                            <img src="img/img2.webp" width="100%" height="100%" class="img1 img-fluid" alt="Imagem 02">
+                            <span class="label-img">RESULTADOS DE JENNIFER LOPEZ TRAS 45 DÍAS DE APLICAR LA RUTINA
+                                REJUVENECEDORA.</span>
+
+                            <h1>EXCLUSIVO PARA LECTORAS DE BCC</h1>
+
+                            <p>Con la repercusión generada tras la entrevista de Jennifer Lopez, la demanda del
+                                tratamiento antiarrugas y antiflacidez conocido como Protocolo Rejuvenecedor Coreano
+                                creció rápidamente.</p>
+
+                            <p>Y con eso, muchas empresas falsas están aprovechando esta repercusión para vender el paso
+                                a paso de este tratamiento de forma completamente falsa y generando frustración a miles
+                                de mujeres.</p>
+
+                            <p>Considerando este caso, el equipo editorial decidió buscar al Doctor Oscar Martínez,
+                                oficial, para preguntarle cómo nuestras lectoras pueden tener acceso al tratamiento
+                                original, y obtuvimos una oportunidad increíble para ti.</p>
+
+                            <p>El tratamiento del Doctor Oscar ya ha ayudado a más de 45 mil mujeres en todo el mundo, y
+                                este mismo tratamiento te puede ayudar hoy, te voy explicar cómo funciona el
+                                tratamiento.</p>
+
+                            <p>Según el Doctor Oscar Martínez, cada vez que aparece una arruga es señal de que algo anda
+                                mal con las células que absorben el colágeno, y el protocolo rejuvenecedor actúa sobre
+                                estas células, permitiendo que el colágeno vuelva a absorberse con normalidad como
+                                ocurría años atrás.</p>
+
+                            <p>Por ello, no importa cuánto colágeno tomes o qué dieta sigas. Si no preparas tu cuerpo
+                                para absorber este colágeno, será desechado a través de la orina.</p>
+
+                            <p>Echa un vistazo a algunos pacientes que el Doctor Oscar envió a nuestra redacción,
+                                mostrando los resultados del Protocolo Rejuvenecedor.</p>
+
+                            <img src="img/img3.webp" width="100%" height="100%" class="img1 img-fluid" alt="Imagem 03">
+                            <span class="label-img">ROSA GONZALES - 53 AÑOS - 9 AÑOS REJUVENECIDA EN 7 SEMANAS DE
+                                TRATAMIENTO.</span>
+
+                            <img src="img/img4.webp" width="100%" height="100%" class="img1 img-fluid" alt="Imagem 04">
+                            <span class="label-img">JUANA BERTINELLI - 49 AÑOS - REJUVENECIDA 5 AÑOS Y ELIMINADO MELASMA
+                                EN 9 SEMANAS DE TRATAMIENTO.</span>
+
+                            <img src="img/img5.webp" width="100%" height="100%" class="img1 img-fluid" alt="Imagem 05">
+                            <span class="label-img">CLEMENTINA NUNES - 55 AÑOS, REJUVENECIDA 10 AÑOS EN 7 SEMANAS DE
+                                TRATAMIENTO.</span>
+
+                            <h1>LA BUENA NOTICIA ES:</h1>
+
+                            <p>El Doctor Oscar es el responsable de crear otros tratamientos además del Protocolo
+                                Rejuvenecedor, y hoy te enviará de regalo el acceso a estos 3 increíbles tratamientos.
+                            </p>
+
+                            <p><b>1º Una Guía para Adelgazar:</b> Si sientes sobrepeso o crees que necesitas bajar la
+                                panza, el equipo médico ha elaborado una Guía que es capaz de eliminar 5 kg de grasa
+                                cada 30 días de forma sana y natural.</p>
+
+                            <h3>CON VALOR DE US$38.00 POR US$0.00</h3>
+
+                            <p><b>2º Proceso Acelerador Capilar:</b> Muchas mujeres tienen dificultad para dejar crecer
+                                su cabello o sufren pérdida de cabello. Hay un proceso que hará que tu cabello sea más
+                                saludable y fuerte, y también tendrás acceso completo a este tratamiento.</p>
+
+                            <h3>CON VALOR DE US$38.00 POR US$0.00</h3>
+
+                            <p><b>3° Tratamiento Cero Estrías:</b> Y para complementar el tratamiento más solicitado por
+                                las mujeres, podrás eliminar el 86% de todas las estrías de tu cuerpo en los próximos 45
+                                días, ¡esto te ayudará a sentirte más hermosa de lo que ya eres!</p>
+
+                            <h3>CON VALOR DE US$58.00 POR US$0.00</h3>
+
+                            <h2>TRATAMIENTO LIBERADO (OBTENLO AHORA)</h2>
+
+                            <p>Estamos hablando de más de $100.00 en regalos, y para asegurarlo todo lo que tienes que
+                                hacer es reservar tu acceso al Protocolo Rejuvenecedor Coreano.</p>
+
+                            <p>Recuerda que esta es una oferta exclusiva para nuestras lectoras de CNN, ahora te estarás
+                                preguntando ¿cuánto cuesta este tratamiento que usan las celebridades para eliminar las
+                                marcas de la edad y la flacidez en el cuerpo? ¿No es así?</p>
+
+                            <p>Por lo general, este producto se distribuye por $79.00…</p>
+
+                            <p>Pero después de negociar con el equipo médico del Doctor Oscar, ¡tenemos dos cosas
+                                increíbles para ti, querida lectora!</p>
+
+                            <h3>VENTAJAS DE LECTORA DE CNN</h3>
+
+                            <h2>¡GARANTÍA DE RESULTADO O DEVOLUCIÓN DE SU INVERSIÓN!</h2>
+
+                            <p>Esto significa que después de completar tu pedido, puedes probar el tratamiento
+                                rejuvenecedor y todas las ventajas durante 30 días. Y si por alguna razón no estás
+                                satisfecha, solo envía un correo electrónico a nuestro equipo de producción y te
+                                devolveremos cada centavo invertido.</p>
+
+                            <h3>VALOR PROMOCIONAL EXCLUSIVO.</h3>
+
+                            <p><span class="red"><b>¡Solo tú, nuestra lectora, tendrás acceso al Protocolo Rejuvenecedor
+                                        Coreano y 3 obsequios increíbles por solo $ 37.00! </b></span> Estamos hablando
+                                de más de $40.00 de descuento para que por fin tengas acceso a un tratamiento capaz de
+                                acabar con las arrugas y las marcas de la edad.</p>
+
+                            <!-- CTA !-->
+                            <a href="LINK AQUI" class="cta-1">
+                                <img src="img/cta1.webp" width="100%" height="100%" class="cta img-fluid blob green"
+                                    alt="PROMOCIÓN VÁLIDA SOLO HASTA EL (FECHA DE HOY)">
+                            </a>
+                            <!-- CTA !-->
+
+                            <p>Recibe el mismo trato que Jennifer Lopes, Shakira y otras celebridades, sin necesidad de
+                                salir de casa. Elimina las arrugas, la piel flácida y las marcas de la edad en 28 días
+                                con el Protocolo Rejuvenecedor Coreano.</p>
+
+                            <h2><span class="red"><b>QUIERO ACCEDER AL TRATAMIENTO Y LOS 3 REGALOS</b></span></h2>
+
+                            <p>Y si aún tiene dudas sobre el tratamiento, invitamos a la dermatóloga más solicitada del
+                                mundo, Shereene Idriss, para que responda algunas preguntas sobre este tratamiento.</p>
+
+                            <p><span class="red">Redacción:</span> ¿Cuánto tiempo tardan las mujeres en ver el cambio al
+                                verse en el espejo?</p>
+
+                            <p><b>Doctor Idriss:</b> En 4 días ya se notará el cambio, después de investigar y entender
+                                mejor el tratamiento del Doctor Oscar, me quedó claro que ningún otro tratamiento da
+                                resultados tan rápido y sin efectos secundarios negativos.</p>
+
+                            <p><span class="red">Redacción:</span> ¿Hay alguna contraindicación? ¿Alguien que no pueda
+                                hacer el tratamiento?</p>
+
+                            <p><b>Dra. Idriss:</b> No. Por el hecho ser un tratamiento casero y natural, diría que es
+                                imposible que alguien salga perjudicado al realizarlo. Incluso diría lo contrario,
+                                aunque no tengas arrugas, aplicar el Protocolo Rejuvenecedor Coreano por la mañana
+                                evitará que aparezcan.</p>
+
+                            <p><span class="red">Redacción:</span> ¿Los pacientes con diabetes o presión arterial alta
+                                también pueden usar el tratamiento?</p>
+
+                            <p><b>Doctora Idriss:</b> Sí, todas las mujeres pueden sentirse bellas y jóvenes, ¿no? Yo
+                                misma lo estoy recomendando a mis pacientes, este tratamiento es algo innovador y
+                                sorprendente. Y por supuesto, lo mejor es que cualquiera puede hacerlo sin tener que
+                                salir de casa</p>
+
+                            <!-- CTA !-->
+                            <a href="LINK AQUI" class="cta-2">
+                                <img src="img/cta2.webp" width="100%" height="100%" class="cta img-fluid blob green"
+                                    alt="¡HAZ CLIC AQUÍ Y RESERVA TU ACCESO AL TRATAMIENTO AHORA!">
+                            </a>
+                            <!-- CTA !-->
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Conteúdo Matéria !-->
+
+    </main>
+    <!-- Conteúdo Geral !-->
+
+    <!-- Footer !-->
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-1 col-lg-1 col-sm-1">
+                    <svg class="cnn-badge-icon" width="40" height="40" viewBox="0 0 240 240" fill=""
+                        xmlns="https://www.w3.org/2000/svg" aria-hidden="true">
+                        <rect x="0" y="0" width="100%" height="100%" fill="#fff"></rect>
+                        <path
+                            d="M.31-.07v240h240V-.07ZM86.54,135.29V92.51c0-16.1,20.81-23.83,31.82-5.12.8,1.35,18.14,31.22,18.14,31.22V92.51c0-16.1,20.8-23.83,31.81-5.12.8,1.35,18.14,31.22,18.14,31.22V76.79h10.38V147a2.11,2.11,0,0,1-1.51,2.14c-1.1.3-2.26-.38-3.11-1.82-.17-.28-9-15.46-17.48-30.13L159.17,90.4c-2.18-3.7-5.43-4.35-7.74-3.72a6.23,6.23,0,0,0-4.55,6.13V147a2.12,2.12,0,0,1-1.51,2.14c-1.11.3-2.27-.38-3.11-1.82-.15-.25-8.34-14.36-16.25-28-10.08-17.38-16.7-28.78-16.8-28.95-2.18-3.71-5.44-4.35-7.77-3.72a6.24,6.24,0,0,0-4.56,6.13v53.05a2.9,2.9,0,0,1-2.72,2.71H67.23a28.64,28.64,0,0,1,0-57.28h14v10.36H67.35a18.28,18.28,0,1,0,0,36.56H83.68A2.84,2.84,0,0,0,86.54,135.29Zm124.77,12.05c0,16.1-20.81,23.83-31.82,5.13-.79-1.35-18.14-31.23-18.14-31.23v26.1c0,16.1-20.8,23.83-31.81,5.13-.8-1.35-18.14-31.23-18.14-31.23v24.61c0,11.17-6.63,17.22-17,17.22H67.25a43.14,43.14,0,0,1,0-86.28h14V87.15h-14a32.78,32.78,0,1,0,0,65.56H94.16a7,7,0,0,0,6.86-6.85V92.81a2.1,2.1,0,0,1,1.51-2.13c1.1-.3,2.26.38,3.11,1.82l16.79,28.93c9.76,16.83,16.17,27.88,16.25,28,2.19,3.7,5.45,4.35,7.78,3.71A6.22,6.22,0,0,0,151,147V92.82a2.11,2.11,0,0,1,1.49-2.14c1.09-.3,2.24.38,3.08,1.82l15.56,26.81,17.49,30.15c1.71,2.9,4.09,3.93,6.16,3.93a6,6,0,0,0,1.61-.22A6.23,6.23,0,0,0,201,147V76.79h10.34Z"
+                            transform="translate(-0.31 0.07)"></path>
+                    </svg>
+                </div>
+                <div class="col-md-6 col-lg-6 col-sm-6">
+                    <p>
+                        © 2023 Cable News Network. A Warner Bros. Discovery Company. All Rights Reserved.
+                        <br>
+                        CNN Sans ™ & © 2016 Cable News Network.
+                    </p>
+                </div>
+                <div class="col-md-5 col-lg-5 col-sm-5 menu">
+                    <ul class="nav-ft">
+                        <li class="item-nav-ft">
+                            <a href="#main">Terms of Use</a>
+                        </li>
+                        <li class="item-nav-ft">
+                            <a href="#main">Privacy Policy</a>
+                        </li>
+                        <li class="item-nav-ft">
+                            <a href="#main">Cookie Settings</a>
+                        </li>
+                        <li class="item-nav-ft">
+                            <a href="#main">Ad Choices</a>
+                        </li>
+                        <li class="item-nav-ft">
+                            <a href="#main">About</a>
+                        </li>
+                        <li class="item-nav-ft">
+                            <a href="#main">Transcripts</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer !-->
+
+    <!-- Marcação SRC !-->
+    <script>
+        function parseQuery(qstr) {
+            var query = {};
+            var a = (qstr[0] === '?' ? qstr.substr(1) : qstr).split('&');
+            for (var i = 0; i < a.length; i++) {
+                var b = a[i].split('=');
+                query[decodeURIComponent(b[0])] = decodeURIComponent(b[1] || '');
+            }
+            return query;
+        }
+
+        function encodeQuery(obj) {
+            var str = [];
+            for (var p in obj)
+                if (obj.hasOwnProperty(p)) {
+                    str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
+                }
+            return str.join("&");
+        }
+
+        function addQueryParameterToDomain(key, value) {
+            var links = document.querySelectorAll('a[href]'),
+                linksLength = links.length,
+                index,
+                queryIndex,
+                queryString,
+                query,
+                url,
+                domain,
+                colonSlashSlash;
+
+            for (index = 0; index < linksLength; ++index) {
+                url = links[index].href,
+                    queryIndex = url.indexOf('?'),
+                    colonSlashSlash = url.indexOf('://');
+
+                domain = url.substring(colonSlashSlash + 3);
+                domain = domain.substring(0, domain.indexOf('/'));
+
+                if (queryIndex === -1) {
+                    url += '?' + key + '=' + value;
+                } else {
+                    queryString = url.substring(queryIndex);
+                    url = url.substring(0, queryIndex);
+                    query = parseQuery(queryString);
+
+                    query[key] = value;
+
+                    url += '?' + encodeQuery(query);
+                }
+
+                links[index].href = url;
+            }
+        }
+
+        function addQuery(item) {
+            var arr = item.split('=');
+            if (arr[0] != null && arr[1] != undefined) {
+                addQueryParameterToDomain(arr[0], arr[1]);
+            }
+        }
+
+        jQuery(function () {
+            var url = window.location.search.replace("?", "");
+            var itens = url.split('&');
+            itens.forEach(addQuery);
+        });
+    </script>
+    <!-- Marcação SRC !-->
+
+</body>
+
+</html>
