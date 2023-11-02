@@ -37,12 +37,13 @@
         h1,
         h2,
         h3,
+        a,
         p {
             font-family: 'Montserrat', sans-serif;
         }
 
         header {
-            padding: 10px 5%;
+            padding: 10px 10px;
             text-align: center;
             background: #FF0000;
         }
@@ -52,7 +53,7 @@
         }
 
         main {
-            padding: 0 5%;
+            padding: 0 10px;
             text-align: center;
         }
 
@@ -89,14 +90,30 @@
             font-weight: 400;
         }
 
-        .wrapper-vsl {
-            display: flex;
-            justify-content: center;
+        .vsl {
+            max-width: 1200px;
+            margin: auto;
         }
 
-        .vsl {
-            width: 1200px;
-            height: 675px;
+        .esconder {
+            display: none;
+        }
+
+        .wrapper-cta {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            margin-top: 30px;
+        }
+
+        .setas {
+            max-width: 100%;
+            width: 250px;
+        }
+
+        .cta {
+            max-width: 100%;
+            width: 900px;
         }
 
         .wrapper-sobre {
@@ -116,7 +133,7 @@
         footer {
             display: flex;
             justify-content: center;
-            padding: 30px 5%;
+            padding: 30px 10px;
             background: #001022;
             text-align: center;
         }
@@ -131,20 +148,6 @@
 
         footer a {
             color: #FFFFFF;
-        }
-
-        @media (max-width: 1600px) {
-            .vsl {
-                width: 1000px;
-                height: 562.5px;
-            }
-        }
-
-        @media (max-width: 1300px) {
-            .vsl {
-                width: 800px;
-                height: 450px;
-            }
         }
 
         @media (max-width: 950px) {
@@ -166,9 +169,8 @@
                 font-size: 16px;
             }
 
-            .vsl {
-                width: 600px;
-                height: 337.5px;
+            .setas {
+                width: 200px;
             }
 
             .sobre {
@@ -187,13 +189,6 @@
 
             footer div {
                 max-width: 450px;
-            }
-        }
-
-        @media (max-width: 750px) {
-            .vsl {
-                width: 400px;
-                height: 225px;
             }
         }
 
@@ -217,13 +212,12 @@
                 font-size: 8px;
             }
 
-            .vsl {
-                width: 300px;
-                height: 168.75px;
-            }
-
             p {
                 font-size: 12px;
+            }
+
+            .setas {
+                width: 180px;
             }
 
             .sobre {
@@ -245,31 +239,31 @@
             }
         }
 
-        @media (max-width: 370px) {
-            .vsl {
-                width: 250px;
-                height: 140.675px;
+        @media (max-width: 400px) {
+            .setas {
+                width: 120px;
             }
         }
     </style>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&display=swap" rel="stylesheet">
-    <link rel="preload" href="https://player-vz-dd8185b2-1bb.tv.pandavideo.com.br/embed/css/styles.css" as="style">
-    <link rel="prerender"
-        href="https://player-vz-dd8185b2-1bb.tv.pandavideo.com.br/embed/?v=081305b0-bf87-4514-9948-9e136648e9b3">
-    <link rel="preload" href="https://player-vz-dd8185b2-1bb.tv.pandavideo.com.br/embed/js/hls.js" as="script">
-    <link rel="preload" href="https://player-vz-dd8185b2-1bb.tv.pandavideo.com.br/embed/js/plyr.polyfilled.min.js"
+    <!-- Speed VTurb -->
+    <link rel="preload"
+        href="https://scripts.converteai.net/20ae35f6-9482-434c-a89d-feeb09959229/players/653eb2c95983360009a1fecd/player.js"
         as="script">
+    <link rel="preload" href="https://cdn.converteai.net/lib/js/smartplayer/v1/smartplayer.min.js" as="script">
     <link rel="preload"
-        href="https://config.tv.pandavideo.com.br/vz-dd8185b2-1bb/081305b0-bf87-4514-9948-9e136648e9b3.json" as="fetch">
-    <link rel="preload" href="https://config.tv.pandavideo.com.br/vz-dd8185b2-1bb/config.json" as="fetch">
+        href="https://images.converteai.net/20ae35f6-9482-434c-a89d-feeb09959229/players/653eb2c95983360009a1fecd/thumbnail.jpg"
+        as="image">
     <link rel="preload"
-        href="https://b-vz-dd8185b2-1bb.tv.pandavideo.com.br/081305b0-bf87-4514-9948-9e136648e9b3/playlist.m3u8"
+        href="https://cdn.converteai.net/20ae35f6-9482-434c-a89d-feeb09959229/653eb27b67a28d0008193d7a/main.m3u8"
         as="fetch">
-    <link rel="dns-prefetch" href="https://b-vz-dd8185b2-1bb.tv.pandavideo.com.br">
-    <link rel="dns-prefetch" href="https://player-vz-dd8185b2-1bb.tv.pandavideo.com.br">
-    <link rel="dns-prefetch" href="https://vz-dd8185b2-1bb.b-cdn.net">
+    <link rel="dns-prefetch" href="https://cdn.converteai.net">
+    <link rel="dns-prefetch" href="https://scripts.converteai.net">
+    <link rel="dns-prefetch" href="https://images.converteai.net">
+    <link rel="dns-prefetch" href="https://api.vturb.com.br">
+    <!-- End speed VTurb -->
     <title>La Piel Perfecta</title>
 </head>
 
@@ -295,18 +289,27 @@
             </div>
         </div>
 
-        <div class="wrapper-vsl">
+        <div>
             <div class="vsl">
-                <iframe id="panda-081305b0-bf87-4514-9948-9e136648e9b3"
-                    src="https://player-vz-dd8185b2-1bb.tv.pandavideo.com.br/embed/?v=081305b0-bf87-4514-9948-9e136648e9b3"
-                    style="border:none;" allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture"
-                    allowfullscreen=true width="100%" height="100%" fetchpriority="high"></iframe>
+                <div id="vid_653eb2c95983360009a1fecd" style="position:relative;width:100%;padding: 56.25% 0 0;"><img
+                        id="thumb_653eb2c95983360009a1fecd"
+                        src="https://images.converteai.net/20ae35f6-9482-434c-a89d-feeb09959229/players/653eb2c95983360009a1fecd/thumbnail.jpg"
+                        style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;display:block;">
+                    <div id="backdrop_653eb2c95983360009a1fecd"
+                        style="position:absolute;top:0;width:100%;height:100%;-webkit-backdrop-filter:blur(5px);backdrop-filter:blur(5px);">
+                    </div>
+                </div>
+                <script type="text/javascript"
+                    id="scr_653eb2c95983360009a1fecd">var s = document.createElement("script"); s.src = "https://scripts.converteai.net/20ae35f6-9482-434c-a89d-feeb09959229/players/653eb2c95983360009a1fecd/player.js", s.async = !0, document.head.appendChild(s);</script>
             </div>
         </div>
 
-        <div id="20fa13b1-fb0d-4e95-9361-7dc530667f5c"></div>
-
-        <div id="34653ab1-882a-4b43-85c1-ee158892891f"></div>
+        <div class="esconder">
+            <a href="https://go.hotmart.com/U87558794T?ap=a2e2" class="wrapper-cta">
+                <img src="setas.gif" class="setas">
+                <img src="cta.webp" class="cta">
+            </a>
+        </div>
 
         <div class="wrapper-sobre">
             <div class="sobre">
@@ -343,9 +346,48 @@
         const spanData = document.getElementById('dataAtual');
         spanData.textContent = dataFormatada;
 
-        if (!document.querySelector('script[src^="https://player.pandavideo.com.br/api.v2.js"]')) { let s = document.createElement('script'); s.src = 'https://player.pandavideo.com.br/api.v2.js'; s.async = true; document.head.appendChild(s); } window.pandascripttag = window.pandascripttag || []; window.pandascripttag.push(function () { const p = new PandaPlayer('panda-081305b0-bf87-4514-9948-9e136648e9b3', { onReady() { p.loadButtonInTime({ fetchApi: true }) } }); })
+        document.addEventListener("DOMContentLoaded", function () {
 
+            var SECONDS_TO_DISPLAY = 1254;
+            var CLASS_TO_DISPLAY = ".esconder";
 
+            var attempts = 0;
+            var elsHiddenList = [];
+            var elsDisplayed = false;
+            var elsHidden = document.querySelectorAll(CLASS_TO_DISPLAY);
+            var alreadyDisplayedKey = `alreadyElsDisplayed${SECONDS_TO_DISPLAY}`
+            var alreadyElsDisplayed = localStorage.getItem(alreadyDisplayedKey);
+
+            setTimeout(function () { elsHiddenList = Array.prototype.slice.call(elsHidden); }, 0);
+
+            var showHiddenElements = function () {
+                elsDisplayed = true;
+                elsHiddenList.forEach((e) => e.style.display = "block");
+                localStorage.setItem(alreadyDisplayedKey, true)
+            }
+
+            var startWatchVideoProgress = function () {
+                if (typeof smartplayer === 'undefined' || !(smartplayer.instances && smartplayer.instances.length)) {
+                    if (attempts >= 10) return;
+                    attempts += 1;
+                    return setTimeout(function () { startWatchVideoProgress() }, 1000);
+                }
+
+                smartplayer.instances[0].on('timeupdate', () => {
+                    if (elsDisplayed || smartplayer.instances[0].smartAutoPlay) return;
+                    if (smartplayer.instances[0].video.currentTime < SECONDS_TO_DISPLAY) return;
+                    showHiddenElements();
+                })
+            }
+
+            if (alreadyElsDisplayed === 'true') {
+                setTimeout(function () { showHiddenElements(); }, 100);
+            } else {
+                startWatchVideoProgress()
+            }
+        });
+
+        /*
         let prefix = ["https://payment.hotmart.com", "https://pay.hotmart.com"];
 
         function getParams() {
@@ -366,7 +408,28 @@
                 for (let r = 0; r < prefix.length; r++) - 1 !== e.href.indexOf(prefix[r]) && (-1 === e.href.indexOf("?") ? e.href += "?" + t.toString() + getParams() : e.href += "&" + t.toString() + getParams())
             })
         }();
+        */
 
+        let prefix = ["https://payment.hotmart.com", "https://pay.hotmart.com", "https://go.hotmart.com"];
+
+        function getParams() {
+            let t = "",
+                e = window.top.location.href,
+                r = new URL(e);
+            if (null != r) {
+                let a = r.searchParams.get("utm_source"),
+                    n = r.searchParams.get("utm_medium"),
+                    o = r.searchParams.get("utm_campaign"),
+                    m = r.searchParams.get("utm_term"),
+                    c = r.searchParams.get("utm_content"); - 1 !== e.indexOf("?") && (t = `&src=${a}|${n}|${o}|${m}|${c}`), console.log(t)
+            }
+            return t
+        } ! function () {
+            var t = new URLSearchParams(window.location.search);
+            t.toString() && document.querySelectorAll("a").forEach(function (e) {
+                for (let r = 0; r < prefix.length; r++) - 1 !== e.href.indexOf(prefix[r]) && (-1 === e.href.indexOf("?") ? e.href += "?" + t.toString() + getParams() : e.href += "&" + t.toString() + getParams())
+            })
+        }();
     </script>
 </body>
 
